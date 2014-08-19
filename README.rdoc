@@ -1,28 +1,31 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Important main Tech Specs and Versions:
 
-Things you may want to cover:
+* Ruby version 2.1.2
 
-* Ruby version
+* Rails 4.1.4
 
-* System dependencies
+* SQLite 3
 
-* Configuration
+* Cucumber set up
 
-* Database creation
+* Selenium set up
 
-* Database initialization
+* RSpec
 
-* How to run the test suite
+Instructions:
+ 
+bundle install
+OR
+bundle update
 
-* Services (job queues, cache servers, search engines, etc.)
+THEN
 
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+1.rake db:migrate
+2.rake db:seed
+3.rails s
+4.Import CSV File:
+first_name,last_name,annual_salary,super_rate,created_at
+David, Rudd,60050,9%, 01 March - 31 March
+Ryan, Chen,120000,10%, 01 March - 31 March
