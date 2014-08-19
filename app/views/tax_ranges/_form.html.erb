@@ -1,0 +1,52 @@
+<%= form_for @tax_range, :html => { :class => "form-horizontal tax_range" } do |f| %>
+
+    <% if @tax_range.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@tax_range.errors.count, "error") %> prohibited this tax_range from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @tax_range.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="control-group">
+    <%= f.label :income_min, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :income_min, :class => 'form-control' %>
+    </div>
+    <%= error_span(@tax_range[:income_min]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :income_max, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :income_max, :class => 'form-control' %>
+    </div>
+    <%= error_span(@tax_range[:income_max]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :rate, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :rate, :class => 'form-control' %>
+    </div>
+    <%= error_span(@tax_range[:rate]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :tax_from_lower_range, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :tax_from_lower_range, :class => 'form-control' %>
+    </div>
+    <%= error_span(@tax_range[:tax_from_lower_range]) %>
+  </div>
+
+
+  <%= f.submit nil, :class => 'btn btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+            tax_ranges_path, :class => 'btn btn-default' %>
+
+<% end %>

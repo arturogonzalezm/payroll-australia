@@ -1,0 +1,38 @@
+<table class="table">
+  <thead>
+    <th>Name</th>
+    <th>Pay Period</th>
+    <th class="text-right">Gross Income</th>
+    <th class="text-right">Income Tax</th>
+    <th class="text-right">Net Income</th>
+    <th class="text-right">Super</th>
+  </thead>
+  <tbody>
+    <% @payslips.each do |ps| %>
+      <tr>
+        <td>
+          <%= ps.name %>
+        </td>
+        <td>
+          <%= ps.pay_period %>
+        </td>
+        <td class="text-right">
+          <%= dollar(ps.gross_income) %>
+        </td>
+        <td class="text-right">
+          <%= dollar(ps.income_tax) %>
+        </td>
+        <td class="text-right">
+          <%= dollar(ps.net_income) %>
+        </td>
+        <td class="text-right">
+          <%= dollar(ps.super_amount) %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<div class="well">
+  Download:
+  <%= link_to 'csv', payslips_export_csv_path(payslips: @params_for_csv, format: :csv) %>
+</div>

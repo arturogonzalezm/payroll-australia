@@ -1,0 +1,38 @@
+<h4>Problem: Employee monthly payslip</h4>
+<p>When I input the employee's details: first name, last name, annual salary(positive integer) and super rate(0% - 50% inclusive), payment start date, the program should generate payslip information with name, pay period,  gross income, income tax, net income and super.</p>
+<p>The calculation details will be the following:</p>
+<p>•       pay period = per calendar month</p>
+<p>•       gross income = annual salary / 12 months</p>
+<p>•       income tax = based on the tax table provide below</p>
+<p>•       net income = gross income - income tax</p>
+<p>•       super = gross income x super rate</p>
+<p>Notes: All calculation results should be rounded to the whole dollar. If >= 50 cents round up to the next dollar increment, otherwise round down.</p>
+
+  <h4>The following rates for 2012-13 apply from 1 July 2012.</h4>
+ <div class="row">
+  <div class="col-sm-6 col-md-3">
+    <div class="thumbnail">
+      <div class="caption">
+        <h4>Taxable income</h4>
+        <p>0 - $18,200     Nil</p>
+        <p>$18,201 - $37,000</p>
+        <p>$37,001 - $80,000</p>
+        <p>$80,001 - $180,000</p>
+        <p>$180,001 and over</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6 col-md-5">
+    <div class="thumbnail">
+      <div class="caption">
+        <h4>Tax on this income</h4>
+        <p>.</p>
+        <p>19c for each $1 over $18,200</p>
+        <p>$3,572 plus 32.5c for each $1 over $37,000</p>
+        <p>$17,547 plus 37c for each $1 over $80,000</p>
+        <p>$54,547 plus 45c for each $1 over $180,000</p>
+      </div>
+    </div>
+  </div>
+</div>
+
