@@ -27,6 +27,6 @@ THEN
 * rails s
 * Import CSV File:
 
-first_name,last_name,annual_salary,super_rate,created_at
-David, Rudd,60050,9%, 01 March - 31 March
-Ryan, Chen,120000,10%, 01 March - 31 March
+    first_name,last_name,annual_salary,super_rate,created_at
+    David, Rudd, 60050, 9%, 01 March – 31 March
+    Ryan, Chen, 120000, 10%, 01 March – 31 March
