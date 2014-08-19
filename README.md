@@ -1,5 +1,7 @@
 == README
 
+<a href="https://codeclimate.com/github/arturosolutions/payroll"><img src="https://codeclimate.com/github/arturosolutions/payroll/badges/gpa.svg" /></a>
+
 Important main Tech Specs and Versions:
 
 * Ruby version 2.1.2
